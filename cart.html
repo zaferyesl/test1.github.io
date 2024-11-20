@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sepetim</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Market</div>
+        <nav>
+            <a href="index.html">Anasayfa</a>
+            <a href="cart.html" class="active">Sepetim</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Sepetim</h1>
+        <div class="cart-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ürün Adı</th>
+                        <th>Adet</th>
+                        <th>Fiyat</th>
+                        <th>Toplam</th>
+                        <th>Sil</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Sepet ürünleri dinamik olarak eklenecek -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="cart-summary">
+            <h2>Toplam: <span id="cart-total">0 TL</span></h2>
+            <button id="empty-cart" class="empty-cart">Sepeti Boşalt</button>
+        </div>
+
+        <!-- WhatsApp Paylaş Butonu -->
+        <div class="whatsapp-share">
+            <a id="whatsapp-share" href="#" target="_blank">
+                <button class="whatsapp-button">Sepeti WhatsApp'ta Paylaş</button>
+            </a>
+        </div>
+    </main>
+</body>
+</html>

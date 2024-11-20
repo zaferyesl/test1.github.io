@@ -1,47 +1,143 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ana Sayfa - E-Ticaret</title>
+    <title>Anasayfa</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js"></script>
+	 
 </head>
+
 <body>
     <header>
-        <div class="logo">
-            <h1>Online Shop</h1>
-        </div>
+       <div class="logo">Market </div>
+
         <nav>
-            <ul>
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="indirimdekiler.html">İndirimdekiler</a></li>
-                <li><a href="sepet.html">Sepet <span id="cart-count">(0)</span></a></li>
-            </ul>
+
+            <a href="index.html" class="active">Anasayfa</a>
+            <a href="cart.html">Sepetim</a>
+			
         </nav>
     </header>
+	 <div class="urunler">Tüm Ürünler</div>
 
-    <section class="products">
-        <div class="product-card">
-            <img src="https://via.placeholder.com/200" alt="Ürün 1">
-            <h3>Ürün Adı 1</h3>
-            <p>Fiyat: 100₺</p>
-            <button class="add-to-cart" data-product="Ürün Adı 1" data-price="100₺">Sepete Ekle</button>
-            <button class="whatsapp-share" data-product="Ürün Adı 1" data-price="100₺">WhatsApp ile Paylaş</button>
-        </div>
-        <div class="product-card">
-            <img src="https://via.placeholder.com/200" alt="Ürün 2">
-            <h3>Ürün Adı 2</h3>
-            <p>Fiyat: 200₺</p>
-            <button class="add-to-cart" data-product="Ürün Adı 2" data-price="200₺">Sepete Ekle</button>
-            <button class="whatsapp-share" data-product="Ürün Adı 2" data-price="200₺">WhatsApp ile Paylaş</button>
-        </div>
-        <!-- Diğer ürünler... -->
-    </section>
-
-    <footer>
-        <p>© 2024 Online Shop. Tüm hakları saklıdır.</p>
-    </footer>
-
-    <script src="script.js"></script>
+	 
+        <!-- Ürün Arama Alanı -->
+		<div class="urunara">
+        <input type="text" id="search-input" placeholder="Ürün Ara..." />
+		</div>
+		<div class="products" id="products-list">
+		
+    <main>
+		  <div class="products">
+		  
+		  
+            <div class="products" data-id="1" data-name="Elma" data-price="10">
+                <img src="elma.jpg" alt="Elma">
+                <h3>Elma</h3>
+                <p>Fiyat: <span class="price">10 TL</span></p>
+                <div class="quantity-control">
+                    <button class="decrease">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increase">+</button>
+                </div>
+                <button class="add-to-cart">Sepete Ekle</button>
+            </div>
+			
+			
+			
+            <div class="product" data-id="2" data-name="Armut" data-price="15">
+                <img src="armut.jpg" alt="Armut">
+                <h3>Armut</h3>
+                <p>Fiyat: <span class="price">15 TL</span></p>
+                <div class="quantity-control">
+                    <button class="decrease">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increase">+</button>
+                </div>
+                <button class="add-to-cart">Sepete Ekle</button>
+            </div>
+			
+		
+            <div class="product" data-id="3" data-name="Çilek" data-price="10">
+                <img src="abc.jpg" alt="Çilek">
+                <h3>Fıstık</h3>
+                <p>Fiyat: <span class="price">25 TL</span></p>
+                <div class="quantity-control">
+                    <button class="decrease">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increase">+</button>
+                </div>
+                <button class="add-to-cart">Sepete Ekle</button>
+            </div>
+			
+		
+            <div class="product" data-id="4" data-name="Elma" data-price="10">
+                <img src="abb.jpg" alt="Elma">
+                <h3>Elma</h3>
+                <p>Fiyat: <span class="price">14 TL</span></p>
+                <div class="quantity-control">
+                    <button class="decrease">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increase">+</button>
+                </div>
+                <button class="add-to-cart">Sepete Ekle</button>
+            </div>
+			
+		
+            <div class="product" data-id="5" data-name="Elma" data-price="10">
+                <img src="att.jpg" alt="Elma">
+                <h3>Çikolata</h3>
+                <p>Fiyat: <span class="price">22 TL</span></p>
+                <div class="quantity-control">
+                    <button class="decrease">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increase">+</button>
+                </div>
+                <button class="add-to-cart">Sepete Ekle</button>
+            </div>
+			
+			         <div class="product" data-id="6" data-name="Elma" data-price="10">
+                <img src="eee.jpg" alt="Elma">
+                <h3>Fıstık</h3>
+                <p>Fiyat: <span class="price">25 TL</span></p>
+                <div class="quantity-control">
+                    <button class="decrease">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increase">+</button>
+                </div>
+                <button class="add-to-cart">Sepete Ekle</button>
+            </div>
+			
+            <div class="product" data-id="7" data-name="Elma" data-price="10">
+                <img src="trtr.jpg" alt="Elma">
+                <h3>Elma</h3>
+                <p>Fiyat: <span class="price">14 TL</span></p>
+                <div class="quantity-control">
+                    <button class="decrease">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increase">+</button>
+                </div>
+                <button class="add-to-cart">Sepete Ekle</button>
+            </div>
+			
+            <div class="product" data-id="8" data-name="Elma" data-price="10">
+                <img src="trgdrg.jpg" alt="Elma">
+                <h3>Çikolata</h3>
+                <p>Fiyat: <span class="price">22 TL</span></p>
+                <div class="quantity-control">
+                    <button class="decrease">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increase">+</button>
+                </div>
+                <button class="add-to-cart">Sepete Ekle</button>
+            </div>
+			
+            <!-- Daha fazla ürün ekleyebilirsiniz -->
+		
+		</div>
+    </main>
 </body>
 </html>
